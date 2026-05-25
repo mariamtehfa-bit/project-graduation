@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/fav.png" />
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib" />
+	<!-- Meta Description -->
+	<meta name="description" content="" />
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="" />
+	<!-- meta character set -->
+	<meta charset="UTF-8" />
+	<!-- Site Title -->
+	<title>translate</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" />
+	<!--
+      CSS
+      =============================================
+    -->
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="css/linearicons.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/hexagons.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	
+	<style>
+		#btn{
+		color: white;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+
+}
+		
+	</style>
+	
+</head>
+
+
+<body>
+	<!-- ================ Start Header Area ================= -->
+	<header class="default-header">
+		<nav class="navbar navbar-expand-lg  navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="img/sign language.png" width="100px" height="50px" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="lnr lnr-menu"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+					<ul class="navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a  href="translate.html">translate</a></li>
+						<li><a href="about.html">About</a></li>
+						
+						<li><a href="contacts.html">Contacts</a></li>
+
+						<li>
+							<button class="search">
+								<span class="lnr lnr-magnifier" id="search"></span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="search-input" id="search-input-box">
+			<div class="container">
+				<form class="d-flex justify-content-between">
+					<input type="text" class="form-control" id="search-input" placeholder="Search Here" />
+					<button type="submit" class="btn"></button>
+					<span class="lnr lnr-cross" id="close-search" title="Close Search"></span>
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- ================ End Header Area ================= -->
+
+	<!-- ================ start banner Area ================= -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12 banner-right">
+					<h1 class="text-white">
+							Translate page
+					</h1>
+					<p class="mx-auto text-white  mt-20 mb-40">
+						let's use our website to translate
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="translate.html">translation </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="index.html"> Home</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+	<!-- ================ End banner Area ================= -->
+
+
+
+	<!-- Start post-content Area -->
+	<section class="post-content-area">
+		<div class="container">
+			 <div class="row">
+
+						<div class="col-lg-9 col-md-9 ">
+    <div>
+        <h1> Translation</h1>
+        <br/>
+        <button id="btn" onclick="openCam()">Open Webcam</button>
+        <br/><br/>  
+        <div class="d-flex flex-column align-items-center">
+            <video id="videoCam" width="640" height="480" autoplay muted playsinline style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);"></video>
+            <br/>
+            <div class="p-3 mb-2 bg-light text-dark rounded border text-center" style="min-width: 350px; box-shadow: 0px 2px 5px rgba(0,0,0,0.05);">
+                <h4 style="color: #7c32ff; font-weight: 500;">الكلمة المترجمة اللحظية:</h4>
+                <h2 id="predictionText" style="font-weight: bold; color: #c738d8; margin-top: 10px;">جاري تهيئة النظام...</h2>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+</div>
+			 </div>
+		</div>
+
+		
+							
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.8/wasm/vision_bundle.js" crossorigin="anonymous"></script>
+
+<script src="js/vision_bundle.js"></script>
+
+    <script>
+        let gestureRecognizer;
+        let video = document.getElementById('videoCam');
+        let predictionText = document.getElementById('predictionText');
+
+        // 1. تهيئة موديل جوجل بدون الحاجة لمجلد model محلي
+        async function initGoogleModel() {
+            if(predictionText) predictionText.innerText = "جاري الاتصال بموديل الذكاء الاصطناعي الخاص بالمشروع...";
+            try {
+                // استخدام خوادم unpkg المستقرة والسريعة جداً لجلب الـ wasm والموديل
+                const vision = await FilesetResolver.forVisionTasks(
+                    "https://unpkg.com/@mediapipe/tasks-vision@0.10.8/wasm"
+                );
+                gestureRecognizer = await GestureRecognizer.createFromOptions(vision, {
+                    baseOptions: {
+                        modelAssetPath: "https://unpkg.com/@mediapipe/tasks-vision@0.10.8/wasm/gesture_recognizer.task",
+                        delegate: "GPU"
+                    },
+                    runningMode: "VIDEO"
+                });
+                if(predictionText) predictionText.innerText = "النظام جاهز تماماً! اضغطي على Open Webcam";
+                console.log("Google Model loaded successfully.");
+            } catch (error) {
+                if(predictionText) predictionText.innerText = "فشل تشغيل الموديل. يرجى التأكد من اتصال الإنترنت وتحديث الصفحة.";
+                console.error(error);
+            }
+        }
+
+        // تشغيل الدالة فور تحميل الصفحة
+        window.onload = initGoogleModel;
+
+        // 2. دالة تشغيل الكاميرا
+        function openCam(){
+           let All_mediaDevices = navigator.mediaDevices;
+           if (!All_mediaDevices || !All_mediaDevices.getUserMedia) return;
+           
+           All_mediaDevices.getUserMedia({ video: { width: 640, height: 480 } })
+           .then(function(vidStream) {
+              video.srcObject = vidStream;
+              video.onloadedmetadata = function() {
+                 video.play();
+                 predictLoop(); // البدء في الترجمة اللحظية
+              };
+           })
+           .catch(function(e) {
+              if(predictionText) predictionText.innerText = "خطأ في فتح الكاميرا.";
+           });
+        }
+
+        // 3. حلقة قراءة الإشارات والترجمة الفورية
+        async function predictLoop() {
+            let nowInMs = Date.now();
+            if (gestureRecognizer && video.readyState === video.HAVE_CURRENT_DATA) {
+                const results = gestureRecognizer.recognizeForVideo(video, nowInMs);
+                
+                if (results.gestures.length > 0) {
+                    const gestureName = results.gestures[0][0].categoryName;
+                    
+                    const translationMap = {
+                        "None": "في انتظار إشارة واضحة...",
+                        "Open_Palm": "كف مفتوح (أهلاً)",
+                        "Closed_Fist": "قبضة مغلقة",
+                        "Pointing_Up": "إشارة لأعلى",
+                        "Thumbs_Down": "غير موافق",
+                        "Thumbs_Up": "موافق",
+                        "Victory": "علامة السلام / النصر",
+                        "ILoveYou": "أنا أحبك (بلغة الإشارة)"
+                    };
+
+                    if(predictionText) {
+                        predictionText.innerText = translationMap[gestureName] || gestureName;
+                    }
+                } else {
+                    if(predictionText) predictionText.innerText = "ضع يدك أمام الكاميرا للترجمة...";
+                }
+            }
+            requestAnimationFrame(predictLoop);
+        }
+    </script>
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/hexagons.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
